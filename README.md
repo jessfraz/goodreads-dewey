@@ -7,6 +7,9 @@
 
 A tool to get the dewey decimal number for books in your Goodreads account.
 
+This tool scrapes your public Goodreads profile for your books versus using the
+Goodreads API because their API is terrible.
+
 **Table of Contents**
 
 <!-- START doctoc -->
@@ -35,7 +38,7 @@ Usage: goodreads-dewey <command>
 Flags:
 
   -d, --debug  enable debug logging (default: false)
-  --id         Goodreads user ID (or env var GOODREADS_ID) (default: 62140943)
+  --id         Goodreads user ID (or env var GOODREADS_ID)
 
 Commands:
 
