@@ -11,8 +11,6 @@ github.com/konsorten/go-windows-terminal-sequences
 # github.com/sirupsen/logrus v1.6.0
 ## explicit
 github.com/sirupsen/logrus
-# github.com/stretchr/testify v1.3.0
-## explicit
 # golang.org/x/net v0.0.0-20200202094626-16171245cfb2
 golang.org/x/net/html
 golang.org/x/net/html/atom
