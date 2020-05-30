@@ -261,7 +261,7 @@ func classifyBook(key, value, title, author string) (Classify, error) {
 		url = fmt.Sprintf("http://classify.oclc.org/classify2/Classify?%s=%s&summary=true", key, value)
 	}
 
-	fmt.Println(url)
+	logrus.Debug(url)
 	resp, err := http.Get(url)
 	if err != nil {
 		return Classify{}, fmt.Errorf("requesting %q=%q title=%q author=%q from the classify API failed: %v", key, value, title, author, err)
