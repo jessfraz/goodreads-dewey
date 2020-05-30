@@ -16,6 +16,7 @@ import (
 	"strconv"
 	"strings"
 	"text/tabwriter"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/genuinetools/pkg/cli"
@@ -262,7 +263,10 @@ func classifyBook(key, value, title, author string) (Classify, error) {
 	}
 
 	logrus.Debug(url)
-	resp, err := http.Get(url)
+	client := &http.Client{
+		Timeout: 2 * time.Second,
+	}
+	resp, err := client.Get(url)
 	if err != nil {
 		return Classify{}, fmt.Errorf("requesting %q=%q title=%q author=%q from the classify API failed: %v", key, value, title, author, err)
 	}
